@@ -1,0 +1,161 @@
+img.inline{
+  width: @global-font-size;
+  height: @global-font-size;
+  display: inline;
+}
+.text-left
+{
+	text-align: left;
+}
+.text-center
+{
+	text-align: center;
+}
+.text-right
+{
+	text-align: right;
+}
+.block-center
+{
+	margin-right: auto;
+	margin-left: auto;
+}
+.important-inline
+{
+	color: @content-font-color-important;
+	font-weight: 600;
+}
+.light-inline
+{
+	.important-inline;
+}
+strong{
+    font-style:normal;
+    font-weight:normal;
+	.important-inline;
+}
+.important
+{
+	text-align: center;
+	color: @content-font-color-important;
+	margin: 10px 20px 10px 20px;
+	font-weight: 600;
+}
+.uppercase
+{
+	text-transform: uppercase;
+}
+.universal-container
+{
+	max-width: @global-struct-container-width-max;
+	margin-right: auto;
+	margin-left: auto;
+}
+.universal-small-container
+{
+	max-width: @global-struct-container-small-width-max;
+	margin-right: auto;
+	margin-left: auto;
+}
+.quote
+{
+	padding: 10px 20px 10px 20px;
+	p
+	{
+		color: @content-font-color-important;
+    	font-style: italic;
+	}
+	p:last-child
+	{
+		text-align: right;
+	}
+}
+.list
+{
+	padding: 10px 20px 10px 20px;
+	p
+	{
+		text-align: center;
+	}
+	p:first-child
+	{
+		color: @content-font-color-important;
+    	font-weight: @content-font-weight-important;
+	}
+}
+
+
+.padding-none
+{
+	padding: @global-padding-none;
+}
+.padding-small
+{
+	padding: @global-padding-small;
+}
+.padding-medium
+{
+	padding: @global-padding-medium;
+}
+.padding-large
+{
+	padding: @global-padding-large;
+}
+.padding-hor
+{
+	padding-bottom: 0;
+	padding-top: 0;
+}
+.div-none
+{
+	width: 100%;
+	height: @global-padding-none;
+}
+.div-small
+{
+	width: 100%;
+	height: @global-padding-small;
+}
+.div-medium
+{
+	width: 100%;
+	height: @global-padding-medium;
+}
+.div-large
+{
+	width: 100%;
+	height: @global-padding-large;
+}
+.div-none-double
+{
+	width: 100%;
+	height: @global-padding-none * 2;	
+}
+.div-small-double
+{
+	width: 100%;
+	height: @global-padding-small * 2;	
+}
+.div-medium-double
+{
+	width: 100%;
+	height: @global-padding-medium * 2;	
+}
+.div-large-double
+{
+	width: 100%;
+	height: @global-padding-large * 2;	
+}
+
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    /* Set your content font stack here: */
+    font-family: @content-font-family;
+}
+
+.disable-selection{
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
