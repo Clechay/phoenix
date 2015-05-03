@@ -11,11 +11,12 @@ super light JS web app support library
 2. Put in your app following files and add them in this order to your app's main html file: 
 
 ```
-[other libs you use, ex. otherlibs/jquery/localJQ.js]
+[bowser lib (included in demo app)]
+[other libs you use, ex. jquery (included in demo app, needed for events module)]
 phoenix/core.js
 phoenix/module/variables.js
 [file which You will use to overwrite phoenix modules default vars, ex app/variables-app.js]
-[additional modules which You want to use, ex. phoenix/modules/events.js]
+[additional modules which You want to use, ex. phoenix/modules/events.js (this one need jquery to work)]
 [your app js files, ex app/app.js]
 ```
 
