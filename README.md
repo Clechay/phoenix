@@ -75,8 +75,11 @@ if (phoenix.core.checkComp()) {
 		//
 		// use phoenix.core to acces core of phoenix
 
-		// log on console that module was loaded successfuly :3 
+		// add module id to modules list so other libs can check if it's avaible when they need it
 		phoenix.core.addModule("{module-id}");
+
+		// log on console that module was loaded successfuly :3 
+		phoenix.core.log("finish_module_loading","events")
 	}
 	else{
 		// log on console that module can not be loaded because of missing libs 
