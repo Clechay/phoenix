@@ -51,6 +51,7 @@ if (phoenix.core.checkComp()) {
 
 		
 		phoenix.core.addModule("events");
+		phoenix.core.log("finish_module_loading","events")
 	}
 	else{
 		phoenix.core.log("could_not_load_module",{id:"events",reason:"deps"})
