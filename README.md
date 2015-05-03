@@ -37,14 +37,57 @@ Use `phoenix.eventReport(id,parms)` to execute all functions from event one by o
 
 # How to create module?
 
-Create script which will:
+`{module-id}` means your module id, ex 'my_module'
 
-1. check if phoenix is working with phoenix.data.compatibility variable
+`{module-dependencies}` means your module dependencies list as an array of strings, ex ['jquery','variables','events']
 
-2. log on console "[phoenix-your_module_name-init] module initializing..." if poenix works or "[phoenix-events-init] incompatibility detected, module will NOT be initialized" if not
+for dependencies check, order of list is meaningless.
 
-3. check if all needed modules have beed already loaded by checking phoenix.data.modulesList.module_name
+```js
+// check if phoenix is compatibile with browser
+if (phoenix.core.checkComp()) {	
 
-4. store data in phoenix.data
+	// check if all needed libs are avaible
+	if (phoenix.core.checkDeps({module-dependencies})) { 
+
+		// log on console that module loading was started 
+		phoenix.core.log("start_module_loading","{module-id}") 
+
+		// create place for your data
+		phoenix.data.{module-id}= new Object();
+
+		// create alias to your data var to make life even easier
+		var data=phoenix.data.{module-id};
+
+		// create place for your module functions
+		phoenix.{module-id}= new Object();
+
+		// create alias to your module functions place to make life even easier
+		var module=phoenix.{module-id};
+
+		// your code
+
+		// use module.{your-function-name}=function (args) { your function code } to add function to module
+		// use module.{your-function-name}(args) to access your module function
+		//
+		// use phoenix.{anther-module-name}.(args) to access function from another module
+		//
+		// use data to acces your module data
+		//
+		// use phoenix.core to acces core of phoenix
+
+		// log on console that module was loaded successfuly :3 
+		phoenix.core.addModule("{module-id}");
+	}
+	else{
+		// log on console that module can not be loaded because of missing libs 
+		phoenix.core.log("could_not_load_module",{id:"{module-id}",reason:"deps"})
+	};
+}
+else{
+	// log on console that module can not be loaded because of browser incompatibility with phoenix itself 
+	phoenix.core.log("could_not_load_module",{id:"{module-id}",reason:"comp"})
+};
+```
 
 Done! You made phoenix module :3
