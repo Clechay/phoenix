@@ -2,8 +2,6 @@
 
 super light JS web app support library
 
-# Changes on the way! I'm rewriting Phoenix!
-
 # How to install?
 
 1. Download phoenix. If You have git, you can use following command `git clone https://github.com/Clechay/phoenix.git` in target dir.
